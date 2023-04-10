@@ -47,8 +47,10 @@ app.use(
   })
 );
 
-app.use(passport.initialize()); //middleware to use passort with express
-app.use(passport.session()); //needed to use express session with passport
+//middleware to use passport with express
+app.use(passport.initialize());
+//needed to use express session with passport
+app.use(passport.session());
 
 //set authenticated user in the response
 app.use(passport.setAuthenticatedUser);
